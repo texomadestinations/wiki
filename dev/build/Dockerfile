@@ -26,11 +26,17 @@ RUN yarn --production --frozen-lockfile --non-interactive
 FROM node:16-alpine
 LABEL maintainer="requarks.io"
 
+ARG PUID=1000
+ARG PGID=1000
+
 RUN apk add bash curl git openssh gnupg sqlite --no-cache && \
     mkdir -p /wiki && \
     mkdir -p /logs && \
     mkdir -p /wiki/data/content && \
     chown -R node:node /wiki /logs
+
+RUN addgroup -g $PGID node-ssh \
+  && adduser -G node-ssh -u $PUID -D node-ssh
 
 WORKDIR /wiki
 
@@ -49,6 +55,6 @@ VOLUME ["/wiki/data/content"]
 EXPOSE 3000
 EXPOSE 3443
 
-# HEALTHCHECK --interval=30s --timeout=30s --start-period=30s --retries=3 CMD curl -f http://localhost:3000/healthz
+HEALTHCHECK --interval=30s --timeout=30s --start-period=30s --retries=3 CMD curl -f http://localhost:3000/healthz
 
 CMD ["node", "server"]
