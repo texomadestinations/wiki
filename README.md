@@ -393,10 +393,12 @@ Thank you to all our patrons! 🙏 [[Become a patron](https://www.patreon.com/re
 - Arti Zirk
 - Ave
 - Brandon Curtis
+- Daniel T. Holtzclaw
 - Dave 'Sri' Seah
 - djagoo
 - dz
 - Douglas Lassance
+- Ergoflix
 - Ernie Reid
 - Etienne
 - Flemis Jurgenheimer
@@ -429,6 +431,7 @@ Thank you to all our patrons! 🙏 [[Become a patron](https://www.patreon.com/re
 - Richeir
 - Sergio Navarro Fernández
 - Shad Narcher
+- ShadowVoyd
 - SmartNET.works
 - Stepan Sokolovskyi
 - Zach Crawford
